@@ -1,0 +1,60 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url("../cocktail.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+.container {
+   margin: 40px 60px 40px 600px; 
+   max-width: 60%;
+   padding-left: 120px;
+   color: #cc011b;
+   
+}
+h1 {
+    font-size: 36px;
+}
+h1, h2, a {
+    color: #fea202;
+}
+
+form {
+    display: flex;
+    box-shadow: 0px 20px 60px rgba(224, 223, 227, 0.5);
+}
+.hint {
+    font-size: 12px;
+    margin: 5px 0 0 8px;
+    
+}
+.request-recipe {
+    padding: 16px;
+    width: 70%;
+    border-radius: 50px;
+    border: 1.5px solid #cc011b;
+    font-size: 18px;
+    color:#cc011b
+    
+}
+
+.submit-button {   
+    width: 20%;
+    margin-left: 10px;
+    border-radius: 50px;
+    background-color: #cc011b;
+    color: #fea202;
+    border: #cc011b;
+    font-size: 16px;
+
+}
+.cocktail-name {
+  text-transform: uppercase;  
+  color: #596626;
+ 
+}
+.recipe {
+    line-height: 1.5;
+    font-size: 18px;
+}
