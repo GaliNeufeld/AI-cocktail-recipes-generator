@@ -8,8 +8,9 @@
     <title>AI Cocktail Recipe Generator</title>
   </head>
   <body>
+    <div class="container">
     <header>
-      <h1>AI Cocktail Recipe Generator</h1>
+      <h1>AI Cocktail Recipes Generator</h1>
     </header>
     <main>
       <form>
@@ -19,32 +20,40 @@
           required
           autofocus
           autocomplete="off"
+          class="request-recipe"
         />
-        <input type="submit" />
+        <input type="submit" class="submit-button"/>
       </form>
-      <div>
-        <h3>Ingredients</h3>
+      <div class="hint">Exp: Cosmopolitan, Mojito etc.</div>
+      <div class="recipe">
+        <h2 class="cocktail-name">sex on the beach</h2>
+        <h2>Ingredients</h2>
         <ul>
-          <li>1 1/2 ounces citron vodka</li>
-          <li>3/4 ounce Cointreau</li>
-          <li>3/4 ounce lime juice, freshly squeezed</li>
-          <li>1/2 ounce cranberry juice cocktail</li>
-          <li>Garnish: lime wedge</li>
+          <li>1 1/2 oz vodka</li>
+          <li>1/2 oz peach schnapps</li>
+          <li>2 oz cranberry juice</li>
+          <li>2 oz orange juice</li>
+          <li>Orange slice and maraschino cherry for garnish</li>
         </ul>
-        <h3>Steps</h3>
+        <h2>Instructions</h2>
         <ol>
           <li>
-            Add the vodka, Cointreau, lime juice, and cranberry juice cocktail
-            into a shaker with ice and shake until well-chilled.
+            Fill a shaker with ice cubes.
           </li>
-          <li>Strain into a chilled cocktail glass.</li>
-          <li>Garnish with a lime wedge.</li>
+          <li>Add the vodka, peach schnapps, cranberry juice, 
+            <br>
+            and orange juice to the shaker.</li>
+          <li>Secure the lid on the shaker and shake well to combine 
+            <br>
+            and chill the ingredients.</li>
+            <li>Strain the mixture into a highball glass filled with ice.</li>
+            <li>Garnish with an orange slice and a maraschino cherry.</li>
         </ol>
       </div>
     </main>
-
+    
     <footer>
-      Coded by
+      <small>Coded by
       <a
         href="https://www.linkedin.com/in/gali-neufeld-69a15461/"
         target="_blank"
@@ -56,7 +65,9 @@
         target="_blank"
         >GitHub</a
       >
+      </small> 
     </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
