@@ -49,7 +49,7 @@ form {
     font-size: 16px;
 
 }
-.cocktail-name {
+#cocktail-name {
   text-transform: uppercase;  
   color: #596626;
  
