@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <title>AI Cocktail Recipe Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+   <title>AI Cocktail Recipe Generator</title>
   </head>
   <body>
     <div class="container">
     <header>
-      <h1>AI Cocktail Recipes Generator</h1>
+      <h2 class="app-heading">AI Cocktail Recipes Generator</h2>
     </header>
     <main>
       <form id="cocktail-recipe-form">
@@ -22,30 +23,25 @@
           autofocus
           autocomplete="off"
           class="request-recipe"
+          id="requested-cocktail"
         />
         <input type="submit" class="submit-button"/>
       </form>
       <div class="hint">Exp: Cosmopolitan, Mojito etc.</div>
-      <div class="recipe">
-        <h2 id="cocktail-name">sex on the beach</h2>
+      
+      <div class="recipe" id="sob-recipe">
+        <h1>sex on the beach</h1>
 
-        <h2>Ingredients</h2>
+        <h2>Ingredients:</h2>
         <ul id="ingredients-list">
-          <li>1 1/2 oz vodka</li>
-          <li>1/2 oz peach schnapps</li>
-          <li>2 oz cranberry juice</li>
-          <li>2 oz orange juice</li>
-          <li>Orange slice and maraschino cherry for garnish</li>
+          
           </ul>
-        <h2>Instructions</h2>
+        <h2>Instructions:</h2>
         <ol id="list-of-instructions">
-          <li>Fill a shaker with ice cubes.</li>
-          <li>Add the vodka, peach schnapps, cranberry juice, and orange juice to the shaker.</li>
-          <li>Secure the lid on the shaker and shake well to combine and chill the ingredients.</li>
-          <li>Strain the mixture into a highball glass filled with ice.</li>
-          <li>Garnish with an orange slice and a maraschino cherry.</li>
+         
         </ol>
       </div>
+       <div id="ai"></div>
     </main>
     
     <footer>

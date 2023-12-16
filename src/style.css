@@ -14,15 +14,24 @@ body {
    
 }
 h1 {
-    font-size: 36px;
+    font-size: 32px;
+    text-transform: uppercase;  
+     color: #596626;
 }
-h1, h2, a {
+
+h2, a {
     color: #fea202;
 }
 
 form {
     display: flex;
     box-shadow: 0px 20px 60px rgba(224, 223, 227, 0.5);
+}
+.hidden {
+    display: none;
+}
+.app-heading {
+    font-size: 36px;
 }
 .hint {
     font-size: 12px;
@@ -35,7 +44,8 @@ form {
     border-radius: 50px;
     border: 1.5px solid #cc011b;
     font-size: 18px;
-    color:#cc011b
+    color:#fea202;
+    font-weight: 800;
     
 }
 
@@ -49,11 +59,7 @@ form {
     font-size: 16px;
 
 }
-#cocktail-name {
-  text-transform: uppercase;  
-  color: #596626;
- 
-}
+
 .recipe {
     line-height: 1.5;
     font-size: 18px;
