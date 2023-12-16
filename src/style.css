@@ -38,15 +38,13 @@ form {
     margin: 5px 0 0 8px;
     
 }
-.request-recipe {
+#requested-cocktail {
     padding: 16px;
     width: 70%;
     border-radius: 50px;
     border: 1.5px solid #cc011b;
     font-size: 18px;
     color:#fea202;
-    font-weight: 800;
-    
 }
 
 .submit-button {   
@@ -60,7 +58,29 @@ form {
 
 }
 
-.recipe {
+.recipe li, #ai li {
     line-height: 1.5;
     font-size: 18px;
 }
+
+#ai h2 {
+    font-size: 24px;
+    color: #fea202;
+}
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+
+
+
+ 
