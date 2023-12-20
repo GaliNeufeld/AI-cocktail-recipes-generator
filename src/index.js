@@ -5,11 +5,11 @@ typewriter = new Typewriter("#ingredients-list", {
 });
 
 typewriter
-  .typeString("<li>1 1/2 oz vodka</li>")
-  .typeString("<li>1/2 oz peach schnapps</li>")
-  .typeString("<li>2 oz cranberry juice</li>")
-  .typeString("<li>2 oz orange juice</li>")
-  .typeString("<li>Orange slice and maraschino cherryfor garnish</li>")
+  .typeString("<li>1 1/2 oz (45ml) Vodka</li>")
+  .typeString("<li>1 oz (30ml) Grenadine syrup</li>")
+  .typeString("<li>4 oz (120ml) Orange juice</li>")
+  .typeString("<li>Ice cubes</li>")
+  .typeString("<li>Strawberry and an orange slice for garnish</li>")
   .start();
 
 typewriter = new Typewriter("#list-of-instructions", {
@@ -19,17 +19,17 @@ typewriter = new Typewriter("#list-of-instructions", {
 });
 
 typewriter
-  .typeString("<li>Fill a shaker with ice cubes.</li>")
+  .typeString("<li>Add ice to a large wine glass.</li>")
   .typeString(
-    "<li>Add the vodka, peach schnapps, cranberry juice, and orange juice to the shaker.</li>"
+    "<li>Pour in the vodka.</li>"
   )
   .typeString(
-    "<li>Secure the lid on the shaker and shake well to combine and chill the ingredients.</li>"
+    "<li>Add the orange juice and stir.</li>"
   )
   .typeString(
-    "<li>Strain the mixture into a highball glass filled with ice.</li>"
+    "<li>Carefully pour the grenadine from high up on the side of the glass.</li>"
   )
-  .typeString("<li>Garnish with an orange slice and a maraschino cherry.</li>")
+  .typeString("<li>Garnish with a strawberry and an orange slice.</li>")
   .start();
 
 let cocktailRecipeForm = document.querySelector("#cocktail-recipe-form");
@@ -45,19 +45,19 @@ function generateRecipe(event) {
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
  
   let cocktailName = document.querySelector(".cocktail-name");
+   cocktailName.style.display = "block";
   cocktailName.innerHTML = `<h1 class="generating" style="color:#596626">Generating a recipe for ${requestedCocktail.value}</h1>`;
- //let cocktailNameElement = document.querySelector("#cocktail-name");
- //cocktailNameElement.innerHTML = `<h1 class="generating" style="color:#596626">Generating a recipe for ${requestedCocktail.value}</h1>`;
- 
+
  
   axios.get(apiUrl).then(displayRecipe);
 }
 
 function displayRecipe(response) {
   
- let sobRecipe = document.querySelector("#sob-recipe");
- sobRecipe.classList.add("hidden");
- let cocktailNameElement = document.querySelector("#cocktail-name");
+ let vodkaSunriseRecipe = document.querySelector("#vodka-sunrise-recipe");
+ vodkaSunriseRecipe.classList.add("hidden");
+ let cocktailName = document.querySelector(".cocktail-name");
+ cocktailName.style.display= "none";
 
   new Typewriter("#ai", {
     strings: response.data.answer,
